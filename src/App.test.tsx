@@ -13,8 +13,24 @@ describe("App", () => {
         unMount = unmount;
     });
 
-    it("renders hello world text", () => {
-        expect(screen.getByTestId("name").textContent).toBe('AYUSHMAN CHHABRA');
+    it("renders about section", () => {
+        expect(screen.getByTestId("about").textContent).toBe('AYUSHMAN CHHABRA');
+    });
+
+    it("renders projects section", () => {
+        expect(screen.getByTestId("projects").textContent).toBe('Projects');
+    });
+
+    it("renders books section", () => {
+        expect(screen.getByTestId("books").textContent).toBe('Books');
+    });
+
+    it("renders videos section", () => {
+        expect(screen.getByTestId("videos").textContent).toBe('Videos');
+    });
+
+    it("renders blogs section", () => {
+        expect(screen.getByTestId("blogs").textContent).toBe('Blogs');
     });
 
     afterEach(() => {

@@ -1,88 +1,136 @@
 import Me from './me.jpg';
 
-const timeline = [
-  {
-    title: 'Certfied Ethical Hacker v13',
-    description: 'EC Council (May 2025 - valid till May 2028)',
-  },
-  {
-    title: 'Penetration Tester',
-    description: 'Acquisory Cyber Consulting LLP (April 2024 - Present)',
-  },
-  {
-    title: 'Bachelor of Science',
-    description: 'University of Toronto (graduated June 2024)',
-  },
-  {
-    title: 'Software Developer',
-    description: 'Constant Health (June 2021 - September 2022)',
-  },
-];
-
-interface TimelineProps {
-  details: {
-    title: string;
-    description: string;
-  }[];
-}
-
-function Timeline({
-  details
-}: TimelineProps) {
-  return (
-    <div className="relative border-l-4 border-gray-300 ml-4 pl-6 space-y-12 ml-[100px]">
-      {details.map((item, idx) => (
-        <div key={idx}>
-          <div style={{ top: `${idx * 92}px` }} className="absolute -left-[9px] w-4 h-4 bg-black rounded-full border-2 border-white shadow"></div>
-          <h3 className="text-lg font-semibold text-black">{item.title}</h3>
-          <p className="text-sm text-gray-600">{item.description}</p>
-        </div>
-      ))}
-    </div>
-  );
-}
-
 function App() {
-
   return (
     <div>
       <nav>
         <ul className="h-[50px] w-full flex items-center justify-end gap-10 pt-[30px] pr-[80px]">
           <li>
-            <a className="text-black font-semibold hover:text-gray-500 transition-colors duration-200 delay-100" href="/home">Work</a>
+            <a
+              className="text-black font-semibold hover:text-gray-500 transition-colors duration-200 delay-100"
+              href="https://github.com/ayushmanchhabra"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Projects
+            </a>
           </li>
           <li>
-            <a className="text-black font-semibold hover:text-gray-500 transition-colors duration-200 delay-100" href="https://github.com/ayushmanchhabra" rel="noopener noreferrer" target="_blank">Projects</a>
+            <a
+              className="text-black font-semibold hover:text-gray-500 transition-colors duration-200 delay-100"
+              href="https://www.linkedin.com/in/ayushmanchhabra/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Resume
+            </a>
           </li>
           <li>
-            <a className="text-black font-semibold hover:text-gray-500 transition-colors duration-200 delay-100" href="https://www.linkedin.com/in/ayushmanchhabra/" rel="noopener noreferrer" target="_blank">Resume</a>
+            <a
+              className="text-black font-semibold hover:text-gray-500 transition-colors duration-200 delay-100"
+              href="mailto:ayushmxn@outlook.com"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Contact
+            </a>
           </li>
         </ul>
       </nav>
-      <section className="h-full pl-20 pt-15 grid grid-cols-[2fr_1fr] items-center flex justify-start items-center">
-        <div className="flex flex-col items-start justify-center">
-          <span className="text-4xl font-semibold text-gray-800">
-            Economics student <br /> turned software developer <br /> turned penetration tester.
+
+      {/* Intro Section */}
+      <section className="grid grid-cols-1 lg:grid-cols-[1fr_1fr] items-center mt-10">
+        {/* Text Section */}
+        <div className="flex flex-col items-start justify-center p-[40px] lg:p-[80px] order-1 lg:order-none">
+          <span className="text-[24px] sm:text-[28px] lg:text-[36px] font-semibold text-gray-800 leading-snug">
+            I'm Ayushman, a Cyber Security Associate at{' '}
+            <a
+              className="text-[#ed0d21]"
+              href="https://acquisory.com/Services/Cyber-Consulting"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Acquisory.
+            </a>{' '}
+            I enjoy making and breaking things.
           </span>
-          <br /><br />
-          <span>
-            Interested in old movies, vehicle number plates and good food.
+          <br />
+          <span className="text-lg sm:text-xl lg:text-2xl font-semibold text-gray-800">
+            Previously at{' '}
+            <a
+              className="text-[#ed0d21]"
+              href="https://www.constanthealth.ca/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Constant Health
+            </a>
           </span>
         </div>
 
-        <div className="max-sm:hidden h-full w-full flex flex-col items-center justify-center pr-[80px]">
-          <img className="border-2" src={Me} alt="Me" />
+        {/* Image Section */}
+        <div className="h-full w-full flex flex-col items-center sm:items-center justify-center p-[40px] lg:p-[80px] order-2 lg:order-none">
+          <img
+            className="border-2 w-[70%] sm:w-[60%] md:w-[50%] lg:w-auto"
+            src={Me}
+            alt="Me"
+          />
         </div>
-
       </section>
 
-      <br /><br />
+      {/* Projects Sections */}
+      <section className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-8 p-[40px]">
+        <div className="h-48 flex flex-col items-start justify-center rounded-xl bg-gray-75 p-10 shadow-lg">
+          <a
+            className="text-2xl font-semibold text-gray-800"
+            href="https://asyncawake.studio"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Async Awake
+          </a>
+          <br />
+          A technology blog about coding, software engineering, cyber security and more.
+        </div>
 
-      <section>
-        <Timeline details={timeline} />
+        <div className="h-48 flex flex-col items-start justify-center rounded-xl bg-gray-75 p-10 shadow-lg">
+          <a
+            className="text-2xl font-semibold text-gray-800"
+            href="https://github.com/ayushmanchhabra/localghost"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Localghost
+          </a>
+          <br />
+          A tool for security automation and instrumentation using JavaScript (Node.js).
+        </div>
+      </section>
+
+      <section className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-8 p-[40px]">
+        <div className="h-48 flex flex-col items-start justify-center rounded-xl bg-gray-75 p-10 shadow-lg">
+          <a
+            className="text-2xl font-semibold text-gray-800"
+            href="https://github.com/nwutils/nw-builder"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            NW.js Utils
+          </a>
+          <br />
+          Maintainer of nw-builder and other NW.js related open-source projects.
+        </div>
+
+        <div className="h-48 flex flex-col items-start justify-center rounded-xl bg-gray-75 p-10 shadow-lg">
+          <a className="text-2xl font-semibold text-gray-800" href="#" rel="noopener noreferrer" target="_blank">
+            Untitled
+          </a>
+          <br />
+          Coming soon...
+        </div>
       </section>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

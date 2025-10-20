@@ -43,14 +43,14 @@ function App() {
         {/* Text Section */}
         <div className="flex flex-col items-start justify-center p-[40px] lg:p-[80px] order-1 lg:order-none">
           <span className="text-[24px] sm:text-[28px] lg:text-[36px] font-semibold text-gray-800 leading-snug">
-            I'm Ayushman, a Cyber Security Associate at{' '}
+            I'm Ayushman, a VAPT Associate at {' '}
             <a
               className="text-[#ed0d21]"
               href="https://acquisory.com/Services/Cyber-Consulting"
               rel="noopener noreferrer"
               target="_blank"
             >
-              Acquisory.
+              Acquisory Cyber Consulting.
             </a>{' '}
             I enjoy making and breaking things.
           </span>

@@ -45,7 +45,7 @@ function App() {
           <span className="text-[24px] sm:text-[28px] lg:text-[36px] font-semibold text-gray-800 leading-snug">
             I'm Ayushman, a VAPT Associate at {' '}
             <a
-              className="text-[#ed0d21]"
+              className="text-[#247BA0] hover:text-[#195970] transition-colors duration-200 delay-100"
               href="https://acquisory.com/Services/Cyber-Consulting"
               rel="noopener noreferrer"
               target="_blank"
@@ -58,7 +58,7 @@ function App() {
           <span className="text-lg sm:text-xl lg:text-2xl font-semibold text-gray-800">
             Previously at{' '}
             <a
-              className="text-[#ed0d21]"
+              className="text-[#247BA0] hover:text-[#195970] transition-colors duration-200 delay-100"
               href="https://www.constanthealth.ca/"
               rel="noopener noreferrer"
               target="_blank"
@@ -78,56 +78,55 @@ function App() {
         </div>
       </section>
 
-      {/* Projects Sections */}
+      <span className="text-lg sm:text-xl lg:text-2xl font-semibold text-[#247BA0] p-[80px]">
+        Here are some of my projects:
+      </span>
+
       <section className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-8 p-[40px]">
-        <div className="h-48 flex flex-col items-start justify-center rounded-xl bg-gray-75 p-10 shadow-lg">
-          <a
-            className="text-2xl font-semibold text-gray-800"
-            href="https://asyncawake.studio"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
+        <a
+          href="https://asyncawake.studio"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group h-48 flex flex-col items-start justify-center rounded-xl bg-gray-75 p-10 shadow-lg transition hover:shadow-xl hover:bg-gray-100 hover:scale-[1.02] cursor-pointer"
+        >
+          <h2 className="text-2xl font-semibold text-gray-800 mb-2 flex items-center gap-2">
             Async Awake
-          </a>
-          <br />
-          A technology blog about coding, software engineering, cyber security and more.
-        </div>
+            <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
+          </h2>
+          <p className="text-gray-700">
+            A technology blog about coding, software engineering, cyber security and more.
+          </p>
+        </a>
 
-        <div className="h-48 flex flex-col items-start justify-center rounded-xl bg-gray-75 p-10 shadow-lg">
-          <a
-            className="text-2xl font-semibold text-gray-800"
-            href="https://github.com/ayushmanchhabra/localghost"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
+        <a
+          href="https://github.com/ayushmanchhabra/localghost"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group h-48 flex flex-col items-start justify-center rounded-xl bg-gray-75 p-10 shadow-lg transition hover:shadow-xl hover:bg-gray-100 hover:scale-[1.02] cursor-pointer"
+        >
+          <h2 className="text-2xl font-semibold text-gray-800 mb-2 flex items-center gap-2">
             Localghost
-          </a>
-          <br />
-          A tool for security automation and instrumentation using JavaScript (Node.js).
-        </div>
-      </section>
+            <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
+          </h2>
+          <p className="text-gray-700">
+            A tool for security automation and instrumentation using JavaScript (Node.js).
+          </p>
+        </a>
 
-      <section className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-8 p-[40px]">
-        <div className="h-48 flex flex-col items-start justify-center rounded-xl bg-gray-75 p-10 shadow-lg">
-          <a
-            className="text-2xl font-semibold text-gray-800"
-            href="https://github.com/nwutils/nw-builder"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
+        <a
+          href="https://github.com/nwutils/nw-builder"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group h-48 flex flex-col items-start justify-center rounded-xl bg-gray-75 p-10 shadow-lg transition hover:shadow-xl hover:bg-gray-100 hover:scale-[1.02] cursor-pointer"
+        >
+          <h2 className="text-2xl font-semibold text-gray-800 mb-2 flex items-center gap-2">
             NW.js Utils
-          </a>
-          <br />
-          Maintainer of nw-builder and other NW.js related open-source projects.
-        </div>
-
-        <div className="h-48 flex flex-col items-start justify-center rounded-xl bg-gray-75 p-10 shadow-lg">
-          <a className="text-2xl font-semibold text-gray-800" href="#" rel="noopener noreferrer" target="_blank">
-            Untitled
-          </a>
-          <br />
-          Coming soon...
-        </div>
+            <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
+          </h2>
+          <p className="text-gray-700">
+            Maintainer of nw-builder and other NW.js related open-source projects.
+          </p>
+        </a>
       </section>
     </div>
   );

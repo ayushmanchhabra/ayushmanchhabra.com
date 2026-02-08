@@ -41,7 +41,7 @@ export default function Post() {
     return (
         <div>
             <nav>
-                <ul className="h-[50px] w-full flex items-center justify-end gap-10 pt-[30px] pr-[80px]">
+                <ul className="w-full flex items-center justify-end gap-3 sm:gap-6 lg:gap-10 pt-2 sm:pt-4 lg:pt-[30px] pr-4 sm:pr-8 lg:pr-[80px] h-auto lg:h-[50px]">
                     <li>
                         <a
                             className="text-black font-semibold hover:text-gray-500 transition-colors duration-200 delay-100"

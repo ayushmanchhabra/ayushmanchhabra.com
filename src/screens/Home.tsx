@@ -4,7 +4,7 @@ function Home() {
   return (
     <div>
       <nav>
-        <ul className="h-[50px] w-full flex items-center justify-end gap-10 pt-[30px] pr-[80px]">
+        <ul className="w-full flex items-center justify-end gap-3 sm:gap-6 lg:gap-10 pt-2 sm:pt-4 lg:pt-[30px] pr-4 sm:pr-8 lg:pr-[80px] h-auto lg:h-[50px]">
           <li>
             <a
               className="text-black font-semibold hover:text-gray-500 transition-colors duration-200 delay-100"
@@ -100,13 +100,13 @@ function Home() {
 
       <section className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-8 p-[40px]">
         <a
-          href="https://github.com/ayushmanchhabra/localghost"
+          href="https://github.com/ayushmanchhabra/taskforce"
           target="_blank"
           rel="noopener noreferrer"
           className="group h-48 flex flex-col items-start justify-center rounded-xl bg-gray-75 p-10 shadow-lg transition hover:shadow-xl hover:bg-gray-100 hover:scale-[1.02] cursor-pointer"
         >
           <h2 className="text-2xl font-semibold text-gray-800 mb-2 flex items-center gap-2">
-            Localghost
+            TaskForce
             <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
           </h2>
           <p className="text-gray-700">

@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build && cp ./CNAME ./dist/CNAME",
-    "lint": "eslint ./src/**/*",
+    "lint": "eslint src/**/*.{ts,tsx}",
     "test": "vitest run --coverage.enabled true",
     "deploy": "gh-pages -b staging -d ./dist -u \"github-actions-bot <support+actions@github.com>\"",
     "preview": "vite preview"

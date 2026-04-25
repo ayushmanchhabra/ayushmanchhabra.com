@@ -16,26 +16,6 @@ function Home() {
           <li>
             <a
               className="text-black font-semibold hover:text-gray-500 transition-colors duration-200 delay-100"
-              href="https://github.com/ayushmanchhabra"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Projects
-            </a>
-          </li>
-          <li>
-            <a
-              className="text-black font-semibold hover:text-gray-500 transition-colors duration-200 delay-100"
-              href="https://www.linkedin.com/in/ayushmanchhabra/"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Resume
-            </a>
-          </li>
-          <li>
-            <a
-              className="text-black font-semibold hover:text-gray-500 transition-colors duration-200 delay-100"
               href="#/blog/post"
             >
               Blog
@@ -44,7 +24,7 @@ function Home() {
           <li>
             <a
               className="text-black font-semibold hover:text-gray-500 transition-colors duration-200 delay-100"
-              href="mailto:ayushmxn@outlook.com"
+              href="mailto:ayushman.chhabra@alumni.utoronto.ca"
               rel="noopener noreferrer"
               target="_blank"
             >
@@ -100,35 +80,34 @@ function Home() {
 
       <section className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-8 p-[40px]">
         <a
-          href="https://github.com/ayushmanchhabra/taskforce"
+          href="https://github.com/ayushmanchhabra/enumx"
           target="_blank"
           rel="noopener noreferrer"
           className="group h-48 flex flex-col items-start justify-center rounded-xl bg-gray-75 p-10 shadow-lg transition hover:shadow-xl hover:bg-gray-100 hover:scale-[1.02] cursor-pointer"
         >
           <h2 className="text-2xl font-semibold text-gray-800 mb-2 flex items-center gap-2">
-            TaskForce
+            enumx
             <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
           </h2>
           <p className="text-gray-700">
-            A tool for security automation and instrumentation using JavaScript (Node.js).
+            Performs subdomain and service enumeration on internet facing and internal network systems. Used to identify attack surface and uncover vulnerabilities hidden in plain sight.
           </p>
         </a>
 
         <a
-          href="https://github.com/ayushmanchhabra/sftp"
+          href="https://github.com/ayushmanchhabra/autofrida"
           target="_blank"
           rel="noopener noreferrer"
           className="group h-48 flex flex-col items-start justify-center rounded-xl bg-gray-75 p-10 shadow-lg transition hover:shadow-xl hover:bg-gray-100 hover:scale-[1.02] cursor-pointer"
         >
           <h2 className="text-2xl font-semibold text-gray-800 mb-2 flex items-center gap-2">
-            SFTP
+            autofrida
             <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
           </h2>
           <p className="text-gray-700">
-            A file upload service which demonstrates secure coding practices, useful for security research, training and awareness.
+            Automates Frida installation on Android (virtual) devices. Jump right into pentesting without worrying about setup and configuration.
           </p>
         </a>
-
 
         <a
           href="https://github.com/nwutils/nw-builder"
@@ -137,11 +116,26 @@ function Home() {
           className="group h-48 flex flex-col items-start justify-center rounded-xl bg-gray-75 p-10 shadow-lg transition hover:shadow-xl hover:bg-gray-100 hover:scale-[1.02] cursor-pointer"
         >
           <h2 className="text-2xl font-semibold text-gray-800 mb-2 flex items-center gap-2">
-            NW.js Utils
+            nw-builder
             <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
           </h2>
           <p className="text-gray-700">
-            Maintainer of nw-builder and other NW.js related open-source projects.
+            Maintainer of nw-builder and other NW.js related tooling.
+          </p>
+        </a>
+
+        <a
+          // href="https://github.com/nwutils/nw-builder"
+          // target="_blank"
+          // rel="noopener noreferrer"
+          className="group h-48 flex flex-col items-start justify-center rounded-xl bg-gray-75 p-10 shadow-lg transition hover:shadow-xl hover:bg-gray-100 hover:scale-[1.02] cursor-pointer"
+        >
+          <h2 className="text-2xl font-semibold text-gray-800 mb-2 flex items-center gap-2">
+            Stealth project
+            <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
+          </h2>
+          <p className="text-gray-700">
+            Coming soon...
           </p>
         </a>
       </section>

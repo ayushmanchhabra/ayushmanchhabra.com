@@ -52,26 +52,6 @@ export default function Post() {
                     <li>
                         <a
                             className="text-black font-semibold hover:text-gray-500 transition-colors duration-200 delay-100"
-                            href="https://github.com/ayushmanchhabra"
-                            rel="noopener noreferrer"
-                            target="_blank"
-                        >
-                            Projects
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            className="text-black font-semibold hover:text-gray-500 transition-colors duration-200 delay-100"
-                            href="https://www.linkedin.com/in/ayushmanchhabra/"
-                            rel="noopener noreferrer"
-                            target="_blank"
-                        >
-                            Resume
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            className="text-black font-semibold hover:text-gray-500 transition-colors duration-200 delay-100"
                             href="#/blog/post"
                         >
                             Blog
@@ -148,6 +128,8 @@ export default function Post() {
                     ))}
                 </ul>
             </section>
+            {/* TODO: add footer section with linkedin and github */}
+            {/* TODO: factor out into components */}
         </div>
     );
 }

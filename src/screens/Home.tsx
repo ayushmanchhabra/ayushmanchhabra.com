@@ -86,11 +86,11 @@ function Home() {
           className="group h-48 flex flex-col items-start justify-center rounded-xl bg-gray-75 p-10 shadow-lg transition hover:shadow-xl hover:bg-gray-100 hover:scale-[1.02] cursor-pointer"
         >
           <h2 className="text-2xl font-semibold text-gray-800 mb-2 flex items-center gap-2">
-            enumx
+            killchain
             <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
           </h2>
           <p className="text-gray-700">
-            Performs subdomain and service enumeration on internet facing and internal network systems. Used to identify attack surface and uncover vulnerabilities hidden in plain sight.
+            Fast low-level TCP/SYN host discovery tool and port scanner built from scratch in C using raw sockets.
           </p>
         </a>
 
@@ -105,7 +105,22 @@ function Home() {
             <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
           </h2>
           <p className="text-gray-700">
-            Automates Frida installation on Android (virtual) devices. Jump right into pentesting without worrying about setup and configuration.
+            Automate Frida installation on Android (virtual) devices. Jump right into pentesting without worrying about setup and configuration.
+          </p>
+        </a>
+
+        <a
+          href="https://verify.asyncawake.studio"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group h-48 flex flex-col items-start justify-center rounded-xl bg-gray-75 p-10 shadow-lg transition hover:shadow-xl hover:bg-gray-100 hover:scale-[1.02] cursor-pointer"
+        >
+          <h2 className="text-2xl font-semibold text-gray-800 mb-2 flex items-center gap-2">
+            Tmp Mail
+            <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
+          </h2>
+          <p className="text-gray-700">
+            Disposable email identifier to reduce spam, fake signups and prevent platform abuse.
           </p>
         </a>
 
@@ -121,21 +136,6 @@ function Home() {
           </h2>
           <p className="text-gray-700">
             Maintainer of nw-builder and other NW.js related tooling.
-          </p>
-        </a>
-
-        <a
-          // href="https://github.com/nwutils/nw-builder"
-          // target="_blank"
-          // rel="noopener noreferrer"
-          className="group h-48 flex flex-col items-start justify-center rounded-xl bg-gray-75 p-10 shadow-lg transition hover:shadow-xl hover:bg-gray-100 hover:scale-[1.02] cursor-pointer"
-        >
-          <h2 className="text-2xl font-semibold text-gray-800 mb-2 flex items-center gap-2">
-            Stealth project
-            <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
-          </h2>
-          <p className="text-gray-700">
-            Coming soon...
           </p>
         </a>
       </section>

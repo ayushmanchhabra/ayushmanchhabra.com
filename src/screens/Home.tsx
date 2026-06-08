@@ -52,7 +52,7 @@ function Home() {
           </span>
           <br />
           <span className="text-lg sm:text-xl lg:text-2xl font-semibold text-gray-800">
-            Previously at{' '}
+            Previously Software Developer at{' '}
             <a
               className="text-[#247BA0] hover:text-[#195970] transition-colors duration-200 delay-100"
               href="https://www.constanthealth.ca/"

@@ -1,7 +1,7 @@
 import {
   HashRouter as Router,
-  Routes,
   Route,
+  Routes,
 } from "react-router-dom";
 
 import { Home, Post } from "./screens";
@@ -16,7 +16,7 @@ function App() {
           <Route path="/blog/post/:date" element={<Post />} />
         </Routes>
       </Router>
-  )
+  );
 }
 
-export default App
+export default App;

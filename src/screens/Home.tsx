@@ -1,10 +1,24 @@
-import { useState, useEffect } from 'react';
-import Me from '../assets/me.jpg';
+import { useEffect,useState } from "react";
+
+import Me from "../assets/me.jpg";
 
 const roles = [
-  'security researcher',
-  'penetration tester',
-  'software developer',
+  "security researcher",
+  "penetration tester",
+  "software developer",
+];
+
+const skills = [
+  "vulnerability assessment",
+  "penetration testing",
+  "exploit development",
+  "source code review",
+  "reverse engineering",
+  "malware analysis",
+  "web security",
+  "mobile security",
+  "network programming",
+  "system architecture design"
 ];
 
 function Home() {
@@ -55,16 +69,16 @@ function Home() {
         {/* Text Section */}
         <div className="flex flex-col items-start justify-center p-[40px] lg:p-[80px] order-1 lg:order-none">
           <span className="text-[24px] sm:text-[28px] lg:text-[36px] font-semibold text-gray-800 leading-snug">
-            I'm Ayushman, a{' '}
-            <span className="inline-flex h-[1.5em] overflow-hidden align-bottom">
+            I"m Ayushman, a{" "}
+            <span className="inline-flex h-[1.375em] overflow-hidden align-bottom">
               <span
                 className="flex flex-col transition-transform duration-500 ease-in-out"
-                style={{ transform: `translateY(-${index * 1.5}em)` }}
+                style={{ transform: `translateY(-${index * 1.375}em)` }}
               >
                 {roles.map((role) => (
                   <span
                     key={role}
-                    className="h-[1.5em] flex items-center text-[#247BA0]"
+                    className="h-[1.375em] flex items-center text-[#247BA0]"
                   >
                     {role}.
                   </span>
@@ -73,6 +87,8 @@ function Home() {
             </span>
             <br />
             <i>I enjoy breaking and making things.</i>
+            <br />
+            <span className="text-[14px] sm:text-[18px] lg:text-[24px] font-semibold text-gray-800 leading-snug"></span>
           </span>
         </div>
 
@@ -85,6 +101,23 @@ function Home() {
           />
         </div>
       </section>
+
+      {/* Skills Marquee */}
+      <section className="w-full overflow-hidden py-6 border-y border-gray-200">
+        <div className="flex w-max animate-marquee gap-12">
+          {[...skills, ...skills].map((skill, i) => (
+            <span
+              key={i}
+              className="flex items-center gap-12 text-lg sm:text-xl font-semibold text-gray-700 whitespace-nowrap"
+            >
+              {skill}
+              <span className="text-[#247BA0]">•</span>
+            </span>
+          ))}
+        </div>
+      </section>
+
+      <br /><br />
 
       <span className="text-lg sm:text-xl lg:text-2xl font-semibold text-[#247BA0] p-[80px]">
         Here are some of my projects:

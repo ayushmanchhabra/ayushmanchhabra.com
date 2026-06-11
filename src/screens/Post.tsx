@@ -1,4 +1,4 @@
-import Markdown from 'react-markdown';
+import Markdown from "react-markdown";
 import { useParams } from "react-router-dom";
 
 import {
@@ -8,7 +8,7 @@ import {
     IMG_20251001_4,
     IMG_20251001_5,
     IMG_20251001_6
-} from '../assets/index';
+} from "../assets/index";
 import {
     POST_20241228,
     POST_20250401,
@@ -22,20 +22,20 @@ export default function Post() {
     const { date } = useParams();
 
     const posts: Record<string, string> = {
-        '2024-12-28.md': POST_20241228,
-        '2025-04-01.md': POST_20250401,
-        '2025-08-01.md': POST_20250801,
-        '2025-09-01.md': POST_20250901,
-        '2025-10-01.md': POST_20251001,
+        "2024-12-28.md": POST_20241228,
+        "2025-04-01.md": POST_20250401,
+        "2025-08-01.md": POST_20250801,
+        "2025-09-01.md": POST_20250901,
+        "2025-10-01.md": POST_20251001,
     };
 
     const images: Record<string, string> = {
-        '2025-10-01_1.jpeg': IMG_20251001_1,
-        '2025-10-01_2.jpeg': IMG_20251001_2,
-        '2025-10-01_3.jpeg': IMG_20251001_3,
-        '2025-10-01_4.jpeg': IMG_20251001_4,
-        '2025-10-01_5.jpeg': IMG_20251001_5,
-        '2025-10-01_6.jpeg': IMG_20251001_6,
+        "2025-10-01_1.jpeg": IMG_20251001_1,
+        "2025-10-01_2.jpeg": IMG_20251001_2,
+        "2025-10-01_3.jpeg": IMG_20251001_3,
+        "2025-10-01_4.jpeg": IMG_20251001_4,
+        "2025-10-01_5.jpeg": IMG_20251001_5,
+        "2025-10-01_6.jpeg": IMG_20251001_6,
     };
 
     return (
@@ -99,7 +99,7 @@ export default function Post() {
                                 },
                             }}
                         >
-                            {posts[date + '.md']}
+                            {posts[date + ".md"]}
                         </Markdown>
                     </div>
                 </div>

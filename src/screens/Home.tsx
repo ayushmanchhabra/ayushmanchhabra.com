@@ -1,4 +1,4 @@
-import { useEffect,useState } from "react";
+import { useEffect, useState } from "react";
 
 import Me from "../assets/me.jpg";
 
@@ -18,7 +18,8 @@ const skills = [
   "web security",
   "mobile security",
   "network programming",
-  "system architecture design"
+  "system architecture design",
+  "legacy system modernization",
 ];
 
 function Home() {
@@ -69,7 +70,7 @@ function Home() {
         {/* Text Section */}
         <div className="flex flex-col items-start justify-center p-[40px] lg:p-[80px] order-1 lg:order-none">
           <span className="text-[24px] sm:text-[28px] lg:text-[36px] font-semibold text-gray-800 leading-snug">
-            I"m Ayushman, a{" "}
+            I'm Ayushman, a{" "}
             <span className="inline-flex h-[1.375em] overflow-hidden align-bottom">
               <span
                 className="flex flex-col transition-transform duration-500 ease-in-out"
@@ -90,6 +91,19 @@ function Home() {
             <br />
             <span className="text-[14px] sm:text-[18px] lg:text-[24px] font-semibold text-gray-800 leading-snug"></span>
           </span>
+
+          <br />
+
+          <p className="mt-4 text-gray-700 text-base sm:text-lg">
+            Open to collaborate and work on security research, red team engagements or software related projects —{" "}
+            <a
+              href="mailto:ayushman.chhabra@alumni.utoronto.ca"
+              className="text-[#247BA0] font-semibold hover:underline"
+            >
+              get in touch
+            </a>
+            .
+          </p>
         </div>
 
         {/* Image Section */}

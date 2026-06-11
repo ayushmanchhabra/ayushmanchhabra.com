@@ -1,6 +1,7 @@
+# runtime
 node_modules
 
+# application
 coverage
 dist
-
 tsconfig.*.tsbuildinfo

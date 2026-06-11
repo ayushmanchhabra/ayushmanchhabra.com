@@ -1,6 +1,22 @@
+import { useState, useEffect } from 'react';
 import Me from '../assets/me.jpg';
 
+const roles = [
+  'security researcher',
+  'penetration tester',
+  'software developer',
+];
+
 function Home() {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((i) => (i + 1) % roles.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div>
       <nav>
@@ -39,28 +55,24 @@ function Home() {
         {/* Text Section */}
         <div className="flex flex-col items-start justify-center p-[40px] lg:p-[80px] order-1 lg:order-none">
           <span className="text-[24px] sm:text-[28px] lg:text-[36px] font-semibold text-gray-800 leading-snug">
-            I'm Ayushman, a VAPT Associate at {' '}
-            <a
-              className="text-[#247BA0] hover:text-[#195970] transition-colors duration-200 delay-100"
-              href="https://acquisory.com/Services/Cyber-Consulting"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Acquisory Cyber Consulting.
-            </a>{' '}
-            I enjoy breaking and making things.
-          </span>
-          <br />
-          <span className="text-lg sm:text-xl lg:text-2xl font-semibold text-gray-800">
-            Previously Software Developer at{' '}
-            <a
-              className="text-[#247BA0] hover:text-[#195970] transition-colors duration-200 delay-100"
-              href="https://www.constanthealth.ca/"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Constant Health
-            </a>
+            I'm Ayushman, a{' '}
+            <span className="inline-flex h-[1.5em] overflow-hidden align-bottom">
+              <span
+                className="flex flex-col transition-transform duration-500 ease-in-out"
+                style={{ transform: `translateY(-${index * 1.5}em)` }}
+              >
+                {roles.map((role) => (
+                  <span
+                    key={role}
+                    className="h-[1.5em] flex items-center text-[#247BA0]"
+                  >
+                    {role}.
+                  </span>
+                ))}
+              </span>
+            </span>
+            <br />
+            <i>I enjoy breaking and making things.</i>
           </span>
         </div>
 
@@ -95,21 +107,6 @@ function Home() {
         </a>
 
         <a
-          href="https://github.com/ayushmanchhabra/autofrida"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group h-48 flex flex-col items-start justify-center rounded-xl bg-gray-75 p-10 shadow-lg transition hover:shadow-xl hover:bg-gray-100 hover:scale-[1.02] cursor-pointer"
-        >
-          <h2 className="text-2xl font-semibold text-gray-800 mb-2 flex items-center gap-2">
-            autofrida
-            <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
-          </h2>
-          <p className="text-gray-700">
-            Automate Frida installation on Android (virtual) devices. Jump right into pentesting without worrying about setup and configuration.
-          </p>
-        </a>
-
-        <a
           href="https://verify.asyncawake.studio"
           target="_blank"
           rel="noopener noreferrer"
@@ -136,6 +133,21 @@ function Home() {
           </h2>
           <p className="text-gray-700">
             Maintainer of nw-builder and other NW.js related tooling.
+          </p>
+        </a>
+
+        <a
+          href="https://github.com/ayushmanchhabra/autofrida"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group h-48 flex flex-col items-start justify-center rounded-xl bg-gray-75 p-10 shadow-lg transition hover:shadow-xl hover:bg-gray-100 hover:scale-[1.02] cursor-pointer"
+        >
+          <h2 className="text-2xl font-semibold text-gray-800 mb-2 flex items-center gap-2">
+            autofrida
+            <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
+          </h2>
+          <p className="text-gray-700">
+            Automate Frida installation on Android (virtual) devices. Jump right into pentesting without worrying about setup and configuration.
           </p>
         </a>
       </section>

@@ -133,7 +133,7 @@ function Home() {
 
       <br /><br />
 
-      <span className="text-lg sm:text-xl lg:text-2xl font-semibold text-[#247BA0] p-[80px]">
+      <span className="block text-lg sm:text-xl lg:text-2xl font-semibold text-[#247BA0] px-[40px] py-[40px] lg:px-[80px] lg:py-[80px]">
         Here are some of my projects:
       </span>
 

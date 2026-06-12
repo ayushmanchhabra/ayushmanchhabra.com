@@ -1,27 +1,37 @@
 [
     {
-        "name": "OS command injection",
+        "name": "OS command injection in 2025",
         "author": "Ayushman Chhabra",
-        "date": "2025-10-01"
+        "date": "2025-10-01",
+        "category": "Walkthroughs",
+        "subtitle": "Exposed directory to shell access"
     },
     {
         "name": "Ideas",
         "author": "Ayushman Chhabra",
-        "date": "2025-09-01"
+        "date": "2025-09-01",
+        "category": "Essays",
+        "subtitle": "Ideas to execution"
     },
     {
         "name": "Cybersecurity: the allegory of the house",
         "author": "Ayushman Chhabra",
-        "date": "2025-08-01"
+        "date": "2025-08-01",
+        "category": "Essays",
+        "subtitle": "ELI5 cybersecurity"
     },
     {
         "name": "Getting into cyber security",
         "author": "Ayushman Chhabra",
-        "date": "2025-04-01"
+        "date": "2025-04-01",
+        "category": "Essays",
+        "subtitle": "Advice for 0-1 yrs"
     },
     {
         "name": "Assumptions",
         "author": "Ayushman Chhabra",
-        "date": "2024-12-28"
+        "date": "2024-12-28",
+        "category": "Essays",
+        "subtitle": "Programming forces you to make assumptions explicit"
     }
 ]

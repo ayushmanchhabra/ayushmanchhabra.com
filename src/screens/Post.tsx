@@ -70,9 +70,9 @@ export default function Post() {
                 </ul>
             </nav>
 
-            <section className="flex flex-col items-start p-[40px] lg:p-[80px]">
+            <section className="flex flex-col items-start">
                 <div className="w-full text-left">
-                    <div className="text-gray-800 leading-relaxed space-y-4">
+                    <div className="p-[40px] pt-0 text-gray-800 leading-relaxed space-y-4">
                         <Markdown
                             components={{
                                 h1: ({ children, ...props }) => (
@@ -105,24 +105,80 @@ export default function Post() {
                 </div>
             </section>
 
-            <section className="p-[40px] lg:p-[80px] pt-0">
+            <section className="p-[40px] pt-0">
                 <ul className="flex flex-col gap-2">
-                    <li>
-                        <a
-                            data-testid="posts-backtomainpage"
-                            href="/"
-                            className="text-black font-semibold hover:text-gray-500 transition-colors duration-200 delay-100"
-                        >
-                            Home
-                        </a>
-                    </li>
-                    {postsInfo.map((post) => (
+                    <h2 className="text-xs font-semibold uppercase tracking-wide text-[#247BA0] pb-2.5 border-b border-gray-200">
+                        Case studies
+                    </h2>
+                    {postsInfo.filter((post) => post.category == 'Case Studies').map((post) => (
                         <li key={post.date}>
-                            <a
-                                href={`#/blog/post/${post.date}`}
-                                className="text-black font-semibold hover:text-gray-500 transition-colors duration-200 delay-100"
-                            >
-                                {post.name}
+                            <a href={`#/blog/post/${post.date}`} className="group block">
+                                <time className="text-sm text-gray-500">
+                                    {new Date(post.date).toLocaleDateString('en-US', {
+                                        year: 'numeric', month: 'long', day: 'numeric',
+                                    })}
+                                </time>
+                                <h3 className="mt-0.5 text-lg font-semibold text-gray-800 group-hover:text-[#247BA0] transition-colors">
+                                    {post.name}
+                                </h3>
+                                <p className="mt-0.5 text-gray-600">{post.subtitle}</p>
+                            </a>
+                        </li>
+                    ))}
+                    <br />
+                    <h2 className="text-xs font-semibold uppercase tracking-wide text-[#247BA0] pb-2.5 border-b border-gray-200">
+                        Walkthroughs
+                    </h2>
+                    {postsInfo.filter((post) => post.category == 'Walkthroughs').map((post) => (
+                        <li key={post.date}>
+                            <a href={`#/blog/post/${post.date}`} className="group block">
+                                <time className="text-sm text-gray-500">
+                                    {new Date(post.date).toLocaleDateString('en-US', {
+                                        year: 'numeric', month: 'long', day: 'numeric',
+                                    })}
+                                </time>
+                                <h3 className="mt-0.5 text-lg font-semibold text-gray-800 group-hover:text-[#247BA0] transition-colors">
+                                    {post.name}
+                                </h3>
+                                <p className="mt-0.5 text-gray-600">{post.subtitle}</p>
+                            </a>
+                        </li>
+                    ))}
+                    <br />
+                    <h2 className="text-xs font-semibold uppercase tracking-wide text-[#247BA0] pb-2.5 border-b border-gray-200">
+                        Field Research
+                    </h2>
+                    {postsInfo.filter((post) => post.category == 'Research').map((post) => (
+                        <li key={post.date}>
+                            <a href={`#/blog/post/${post.date}`} className="group block">
+                                <time className="text-sm text-gray-500">
+                                    {new Date(post.date).toLocaleDateString('en-US', {
+                                        year: 'numeric', month: 'long', day: 'numeric',
+                                    })}
+                                </time>
+                                <h3 className="mt-0.5 text-lg font-semibold text-gray-800 group-hover:text-[#247BA0] transition-colors">
+                                    {post.name}
+                                </h3>
+                                <p className="mt-0.5 text-gray-600">{post.subtitle}</p>
+                            </a>
+                        </li>
+                    ))}
+                    <br />
+                    <h2 className="text-xs font-semibold uppercase tracking-wide text-[#247BA0] pb-2.5 border-b border-gray-200">
+                        Essays
+                    </h2>
+                    {postsInfo.filter((post) => post.category == 'Essays').map((post) => (
+                        <li key={post.date}>
+                            <a href={`#/blog/post/${post.date}`} className="group block">
+                                <time className="text-sm text-gray-500">
+                                    {new Date(post.date).toLocaleDateString('en-US', {
+                                        year: 'numeric', month: 'long', day: 'numeric',
+                                    })}
+                                </time>
+                                <h3 className="mt-0.5 text-lg font-semibold text-gray-800 group-hover:text-[#247BA0] transition-colors">
+                                    {post.name}
+                                </h3>
+                                <p className="mt-0.5 text-gray-600">{post.subtitle}</p>
                             </a>
                         </li>
                     ))}

@@ -7,7 +7,26 @@ import {
     IMG_20251001_3,
     IMG_20251001_4,
     IMG_20251001_5,
-    IMG_20251001_6
+    IMG_20251001_6,
+    IMG_20260228_1,
+    IMG_20260228_2,
+    IMG_20260228_3,
+    IMG_20260228_4,
+    IMG_20260228_5,
+    IMG_20260228_6,
+    IMG_20260228_7,
+    IMG_20260228_8,
+    IMG_20260228_9,
+    IMG_20260228_10,
+    IMG_20260228_11,
+    IMG_20260228_12,
+    IMG_20260228_13,
+    IMG_20260228_14,
+    IMG_20260228_15,
+    IMG_20260228_16,
+    IMG_20260228_17,
+    IMG_20260228_18,
+    IMG_20260228_19,
 } from "../assets/index";
 import {
     POST_20241228,
@@ -15,6 +34,7 @@ import {
     POST_20250801,
     POST_20250901,
     POST_20251001,
+    POST_20260228,
     postsInfo,
 } from "../content/cyber/index";
 
@@ -27,6 +47,7 @@ export default function Post() {
         "2025-08-01.md": POST_20250801,
         "2025-09-01.md": POST_20250901,
         "2025-10-01.md": POST_20251001,
+        "2026-02-28.md": POST_20260228,
     };
 
     const images: Record<string, string> = {
@@ -36,6 +57,25 @@ export default function Post() {
         "2025-10-01_4.jpeg": IMG_20251001_4,
         "2025-10-01_5.jpeg": IMG_20251001_5,
         "2025-10-01_6.jpeg": IMG_20251001_6,
+        "2026-02-28_1.png": IMG_20260228_1,
+        "2026-02-28_2.png": IMG_20260228_2,
+        "2026-02-28_3.png": IMG_20260228_3,
+        "2026-02-28_4.png": IMG_20260228_4,
+        "2026-02-28_5.png": IMG_20260228_5,
+        "2026-02-28_6.png": IMG_20260228_6,
+        "2026-02-28_7.png": IMG_20260228_7,
+        "2026-02-28_8.png": IMG_20260228_8,
+        "2026-02-28_9.png": IMG_20260228_9,
+        "2026-02-28_10.png": IMG_20260228_10,
+        "2026-02-28_11.png": IMG_20260228_11,
+        "2026-02-28_12.png": IMG_20260228_12,
+        "2026-02-28_13.png": IMG_20260228_13,
+        "2026-02-28_14.png": IMG_20260228_14,
+        "2026-02-28_15.png": IMG_20260228_15,
+        "2026-02-28_16.png": IMG_20260228_16,
+        "2026-02-28_17.png": IMG_20260228_17,
+        "2026-02-28_18.png": IMG_20260228_18,
+        "2026-02-28_19.png": IMG_20260228_19,
     };
 
     return (
@@ -82,6 +122,21 @@ export default function Post() {
                                     >
                                         {children}
                                     </h1>
+                                ),
+                                h2: ({ children, ...props }) => (
+                                    <h2 {...props} className="text-3xl font-bold text-gray-900 mt-6">
+                                        {children}
+                                    </h2>
+                                ),
+                                h3: ({ children, ...props }) => (
+                                    <h3 {...props} className="text-2xl font-semibold text-gray-900 mt-4">
+                                        {children}
+                                    </h3>
+                                ),
+                                a: ({ children, ...props }) => (
+                                    <a {...props} className="text-[#247BA0] underline hover:text-blue-700 transition-colors">
+                                        {children}
+                                    </a>
                                 ),
                                 img: ({ src, alt, ...props }) => {
                                     const resolvedSrc = images[src as string];

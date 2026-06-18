@@ -1,5 +1,12 @@
 [
     {
+        "name": "OSCP Proving Grounds - Fractal",
+        "author": "Ayushman Chhabra",
+        "date": "2026-02-28",
+        "category": "Walkthroughs",
+        "subtitle": "From enumeration, initial access and privilege escalation"
+    },
+    {
         "name": "OS command injection in 2025",
         "author": "Ayushman Chhabra",
         "date": "2025-10-01",

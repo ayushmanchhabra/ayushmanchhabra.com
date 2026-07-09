@@ -160,7 +160,7 @@ function Home() {
           className="group h-48 flex flex-col items-start justify-center rounded-xl bg-gray-75 p-10 shadow-lg transition hover:shadow-xl hover:bg-gray-100 hover:scale-[1.02] cursor-pointer"
         >
           <h2 className="text-2xl font-semibold text-gray-800 mb-2 flex items-center gap-2">
-            Tmp Mail
+            MailVet
             <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
           </h2>
           <p className="text-gray-700">

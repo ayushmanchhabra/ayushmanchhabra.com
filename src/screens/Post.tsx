@@ -161,11 +161,10 @@ export default function Post() {
             </section>
 
             <section className="p-[40px] pt-0">
-                <ul className="flex flex-col gap-2">
-                    <h2 className="text-xs font-semibold uppercase tracking-wide text-[#247BA0] pb-2.5 border-b border-gray-200">
-                        Case studies
-                    </h2>
-                    {postsInfo.filter((post) => post.category == 'Case Studies').map((post) => (
+                <ul className="flex flex-col gap-4">
+                    {[...postsInfo]
+                        .sort((firstPost, secondPost) => secondPost.date.localeCompare(firstPost.date))
+                        .map((post) => (
                         <li key={post.date}>
                             <a href={`#/blog/post/${post.date}`} className="group block">
                                 <time className="text-sm text-gray-500">
@@ -177,66 +176,12 @@ export default function Post() {
                                     {post.name}
                                 </h3>
                                 <p className="mt-0.5 text-gray-600">{post.subtitle}</p>
+                                <span className="mt-1 inline-block text-xs font-semibold uppercase tracking-wide text-[#247BA0]">
+                                    {post.category}
+                                </span>
                             </a>
                         </li>
-                    ))}
-                    <br />
-                    <h2 className="text-xs font-semibold uppercase tracking-wide text-[#247BA0] pb-2.5 border-b border-gray-200">
-                        Walkthroughs
-                    </h2>
-                    {postsInfo.filter((post) => post.category == 'Walkthroughs').map((post) => (
-                        <li key={post.date}>
-                            <a href={`#/blog/post/${post.date}`} className="group block">
-                                <time className="text-sm text-gray-500">
-                                    {new Date(post.date).toLocaleDateString('en-US', {
-                                        year: 'numeric', month: 'long', day: 'numeric',
-                                    })}
-                                </time>
-                                <h3 className="mt-0.5 text-lg font-semibold text-gray-800 group-hover:text-[#247BA0] transition-colors">
-                                    {post.name}
-                                </h3>
-                                <p className="mt-0.5 text-gray-600">{post.subtitle}</p>
-                            </a>
-                        </li>
-                    ))}
-                    <br />
-                    <h2 className="text-xs font-semibold uppercase tracking-wide text-[#247BA0] pb-2.5 border-b border-gray-200">
-                        Field Research
-                    </h2>
-                    {postsInfo.filter((post) => post.category == 'Research').map((post) => (
-                        <li key={post.date}>
-                            <a href={`#/blog/post/${post.date}`} className="group block">
-                                <time className="text-sm text-gray-500">
-                                    {new Date(post.date).toLocaleDateString('en-US', {
-                                        year: 'numeric', month: 'long', day: 'numeric',
-                                    })}
-                                </time>
-                                <h3 className="mt-0.5 text-lg font-semibold text-gray-800 group-hover:text-[#247BA0] transition-colors">
-                                    {post.name}
-                                </h3>
-                                <p className="mt-0.5 text-gray-600">{post.subtitle}</p>
-                            </a>
-                        </li>
-                    ))}
-                    <br />
-                    <h2 className="text-xs font-semibold uppercase tracking-wide text-[#247BA0] pb-2.5 border-b border-gray-200">
-                        Essays
-                    </h2>
-                    {postsInfo.filter((post) => post.category == 'Essays').map((post) => (
-                        <li key={post.date}>
-                            <a href={`#/blog/post/${post.date}`} className="group block">
-                                <time className="text-sm text-gray-500">
-                                    {new Date(post.date).toLocaleDateString('en-US', {
-                                        year: 'numeric', month: 'long', day: 'numeric',
-                                    })}
-                                </time>
-                                <h3 className="mt-0.5 text-lg font-semibold text-gray-800 group-hover:text-[#247BA0] transition-colors">
-                                    {post.name}
-                                </h3>
-                                <p className="mt-0.5 text-gray-600">{post.subtitle}</p>
-                            </a>
-                        </li>
-                    ))}
+                        ))}
                 </ul>
             </section>
             {/* TODO: add footer section with linkedin and github */}

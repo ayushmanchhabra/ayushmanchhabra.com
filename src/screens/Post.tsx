@@ -168,8 +168,8 @@ export default function Post() {
                         <li key={post.date}>
                             <a href={`#/blog/post/${post.date}`} className="group block">
                                 <time className="text-sm text-gray-500">
-                                    {new Date(post.date).toLocaleDateString('en-US', {
-                                        year: 'numeric', month: 'long', day: 'numeric',
+                                    {new Date(post.date).toLocaleDateString("en-US", {
+                                        year: "numeric", month: "long", day: "numeric",
                                     })}
                                 </time>
                                 <h3 className="mt-0.5 text-lg font-semibold text-gray-800 group-hover:text-[#247BA0] transition-colors">

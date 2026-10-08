@@ -27,6 +27,7 @@ import {
     IMG_20260228_17,
     IMG_20260228_18,
     IMG_20260228_19,
+    IMG_20260601,
 } from "../assets/index";
 import {
     POST_20241228,
@@ -35,6 +36,7 @@ import {
     POST_20250901,
     POST_20251001,
     POST_20260228,
+    POST_20260601,
     postsInfo,
 } from "../content/cyber/index";
 
@@ -48,6 +50,7 @@ export default function Post() {
         "2025-09-01.md": POST_20250901,
         "2025-10-01.md": POST_20251001,
         "2026-02-28.md": POST_20260228,
+        "2026-06-01.md": POST_20260601,
     };
 
     const images: Record<string, string> = {
@@ -76,6 +79,7 @@ export default function Post() {
         "2026-02-28_17.png": IMG_20260228_17,
         "2026-02-28_18.png": IMG_20260228_18,
         "2026-02-28_19.png": IMG_20260228_19,
+        "2026-06-01.png": IMG_20260601,
     };
 
     return (

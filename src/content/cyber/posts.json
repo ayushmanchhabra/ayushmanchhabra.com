@@ -1,5 +1,12 @@
 [
     {
+        "name": "Introducing killchain",
+        "author": "Ayushman Chhabra",
+        "date": "2026-06-01",
+        "category": "Research",
+        "subtitle": "TCP SYN scan in C, using raw sockets."
+    },
+    {
         "name": "OSCP Proving Grounds - Fractal",
         "author": "Ayushman Chhabra",
         "date": "2026-02-28",

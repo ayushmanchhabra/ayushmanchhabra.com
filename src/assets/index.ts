@@ -23,6 +23,7 @@ import IMG_20260228_16 from "./cyber/2026-02-28_16.png";
 import IMG_20260228_17 from "./cyber/2026-02-28_17.png";
 import IMG_20260228_18 from "./cyber/2026-02-28_18.png";
 import IMG_20260228_19 from "./cyber/2026-02-28_19.png";
+import IMG_20260601 from "./cyber/2026-06-01.jpg";
 
 
 export {
@@ -51,4 +52,5 @@ export {
     IMG_20260228_17,
     IMG_20260228_18,
     IMG_20260228_19,
+    IMG_20260601,
 };

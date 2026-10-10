@@ -524,7 +524,7 @@ category: Triveni
 andhiyara cha gaya jo hum din mei na kar paye\\
 vo humne sapno mei khatm kar diya
 
-lekin subah sapne hi bhool jao toh khwaab pura hua?
+lekin subah sapna hi bhool jao toh khwaab pura hua?
 
 3/365
 `,"./tech/2024-12-28.md":`---

@@ -521,7 +521,7 @@ category: Triveni
 
 # Khwaab
 
-andhiyara cha gaya jo hum din mei na kar paye\\
+andhiyara cha gaya aur jo hum din mei na kar paye\\
 vo humne sapno mei khatm kar diya
 
 lekin subah sapna hi bhool jao toh khwaab pura hua?

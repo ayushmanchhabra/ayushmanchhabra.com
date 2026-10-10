@@ -1,90 +1,23 @@
 import Markdown from "react-markdown";
 import { useParams } from "react-router-dom";
 
-import {
-    IMG_20251001_1,
-    IMG_20251001_2,
-    IMG_20251001_3,
-    IMG_20251001_4,
-    IMG_20251001_5,
-    IMG_20251001_6,
-    IMG_20260228_1,
-    IMG_20260228_2,
-    IMG_20260228_3,
-    IMG_20260228_4,
-    IMG_20260228_5,
-    IMG_20260228_6,
-    IMG_20260228_7,
-    IMG_20260228_8,
-    IMG_20260228_9,
-    IMG_20260228_10,
-    IMG_20260228_11,
-    IMG_20260228_12,
-    IMG_20260228_13,
-    IMG_20260228_14,
-    IMG_20260228_15,
-    IMG_20260228_16,
-    IMG_20260228_17,
-    IMG_20260228_18,
-    IMG_20260228_19,
-    IMG_20260601,
-} from "../assets/index";
-import {
-    POST_20241228,
-    POST_20250401,
-    POST_20250801,
-    POST_20250901,
-    POST_20251001,
-    POST_20260228,
-    POST_20260601,
-    POST_20260901,
-    POST_20261001,
-    postsInfo,
-} from "../content/cyber/index";
+import { posts } from "../content/index";
+
+const images = Object.fromEntries(
+    Object.entries(
+        import.meta.glob("../assets/**/*.{png,jpg,jpeg}", {
+            eager: true,
+            query: "?url",
+            import: "default",
+        }) as Record<string, string>,
+    ).map(([path, url]) => [path.split("/").pop()!, url]),
+);
 
 export default function Post() {
-    const { date } = useParams();
+    const { section, slug } = useParams();
 
-    const posts: Record<string, string> = {
-        "2024-12-28.md": POST_20241228,
-        "2025-04-01.md": POST_20250401,
-        "2025-08-01.md": POST_20250801,
-        "2025-09-01.md": POST_20250901,
-        "2025-10-01.md": POST_20251001,
-        "2026-02-28.md": POST_20260228,
-        "2026-06-01.md": POST_20260601,
-        "2026-09-01.md": POST_20260901,
-        "2026-10-01.md": POST_20261001,
-    };
-
-    const images: Record<string, string> = {
-        "2025-10-01_1.jpeg": IMG_20251001_1,
-        "2025-10-01_2.jpeg": IMG_20251001_2,
-        "2025-10-01_3.jpeg": IMG_20251001_3,
-        "2025-10-01_4.jpeg": IMG_20251001_4,
-        "2025-10-01_5.jpeg": IMG_20251001_5,
-        "2025-10-01_6.jpeg": IMG_20251001_6,
-        "2026-02-28_1.png": IMG_20260228_1,
-        "2026-02-28_2.png": IMG_20260228_2,
-        "2026-02-28_3.png": IMG_20260228_3,
-        "2026-02-28_4.png": IMG_20260228_4,
-        "2026-02-28_5.png": IMG_20260228_5,
-        "2026-02-28_6.png": IMG_20260228_6,
-        "2026-02-28_7.png": IMG_20260228_7,
-        "2026-02-28_8.png": IMG_20260228_8,
-        "2026-02-28_9.png": IMG_20260228_9,
-        "2026-02-28_10.png": IMG_20260228_10,
-        "2026-02-28_11.png": IMG_20260228_11,
-        "2026-02-28_12.png": IMG_20260228_12,
-        "2026-02-28_13.png": IMG_20260228_13,
-        "2026-02-28_14.png": IMG_20260228_14,
-        "2026-02-28_15.png": IMG_20260228_15,
-        "2026-02-28_16.png": IMG_20260228_16,
-        "2026-02-28_17.png": IMG_20260228_17,
-        "2026-02-28_18.png": IMG_20260228_18,
-        "2026-02-28_19.png": IMG_20260228_19,
-        "2026-06-01.png": IMG_20260601,
-    };
+    const sectionPosts = posts.filter((post) => post.section === section);
+    const post = sectionPosts.find((post) => post.slug === slug);
 
     return (
         <div>
@@ -100,9 +33,17 @@ export default function Post() {
                     <li>
                         <a
                             className="text-black font-semibold hover:text-gray-500 transition-colors duration-200 delay-100"
-                            href="#/blog/post"
+                            href="#/tech"
                         >
                             Blog
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            className="text-black font-semibold hover:text-gray-500 transition-colors duration-200 delay-100"
+                            href="#/poetry"
+                        >
+                            Poetry
                         </a>
                     </li>
                     <li>
@@ -162,7 +103,7 @@ export default function Post() {
                                 },
                             }}
                         >
-                            {posts[date + ".md"]}
+                            {post?.body ?? ""}
                         </Markdown>
                     </div>
                 </div>
@@ -170,18 +111,16 @@ export default function Post() {
 
             <section className="p-[40px] pt-0">
                 <ul className="flex flex-col gap-4">
-                    {[...postsInfo]
-                        .sort((firstPost, secondPost) => secondPost.date.localeCompare(firstPost.date))
-                        .map((post) => (
-                        <li key={post.date}>
-                            <a href={`#/blog/post/${post.date}`} className="group block">
+                    {sectionPosts.map((post) => (
+                        <li key={post.slug}>
+                            <a href={`#/${post.section}/${post.slug}`} className="group block">
                                 <time className="text-sm text-gray-500">
                                     {new Date(post.date).toLocaleDateString("en-US", {
                                         year: "numeric", month: "long", day: "numeric",
                                     })}
                                 </time>
                                 <h3 className="mt-0.5 text-lg font-semibold text-gray-800 group-hover:text-[#247BA0] transition-colors">
-                                    {post.name}
+                                    {post.title}
                                 </h3>
                                 <p className="mt-0.5 text-gray-600">{post.subtitle}</p>
                                 <span className="mt-1 inline-block text-xs font-semibold uppercase tracking-wide text-[#247BA0]">
@@ -189,7 +128,7 @@ export default function Post() {
                                 </span>
                             </a>
                         </li>
-                        ))}
+                    ))}
                 </ul>
             </section>
             {/* TODO: add footer section with linkedin and github */}

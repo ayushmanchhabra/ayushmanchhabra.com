@@ -47,9 +47,17 @@ function Home() {
           <li>
             <a
               className="text-black font-semibold hover:text-gray-500 transition-colors duration-200 delay-100"
-              href="#/blog/post"
+              href="#/tech"
             >
               Blog
+            </a>
+          </li>
+          <li>
+            <a
+              className="text-black font-semibold hover:text-gray-500 transition-colors duration-200 delay-100"
+              href="#/poetry"
+            >
+              Poetry
             </a>
           </li>
           <li>

@@ -6,6 +6,7 @@ import POST_20251001 from "./2025-10-01.md?raw";
 import POST_20260228 from "./2026-02-28.md?raw";
 import POST_20260601 from "./2026-06-01.md?raw";
 import POST_20260901 from "./2026-09-01.md?raw";
+import POST_20261001 from "./2026-10-01.md?raw";
 import postsInfo from "./posts.json";
 
 export {
@@ -17,5 +18,6 @@ export {
     POST_20260228,
     POST_20260601,
     POST_20260901,
+    POST_20261001,
     postsInfo,
 };

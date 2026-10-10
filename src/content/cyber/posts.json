@@ -1,16 +1,23 @@
 [
-     {
+    {
+        "name": "Depth vs Breadth",
+        "author": "Ayushman Chhabra",
+        "date": "2026-10-01",
+        "category": "Essays",
+        "subtitle": "Should you learn breadth first or depth first?"
+    },
+    {
         "name": "Introducing MailVet",
         "author": "Ayushman Chhabra",
         "date": "2026-09-01",
-        "category": "Research",
+        "category": "Tools",
         "subtitle": "Identify disposable emails."
     },
     {
         "name": "Introducing killchain",
         "author": "Ayushman Chhabra",
         "date": "2026-06-01",
-        "category": "Research",
+        "category": "Tools",
         "subtitle": "TCP SYN scan in C, using raw sockets."
     },
     {

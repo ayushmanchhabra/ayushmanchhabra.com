@@ -38,6 +38,7 @@ import {
     POST_20260228,
     POST_20260601,
     POST_20260901,
+    POST_20261001,
     postsInfo,
 } from "../content/cyber/index";
 
@@ -53,6 +54,7 @@ export default function Post() {
         "2026-02-28.md": POST_20260228,
         "2026-06-01.md": POST_20260601,
         "2026-09-01.md": POST_20260901,
+        "2026-10-01.md": POST_20261001,
     };
 
     const images: Record<string, string> = {

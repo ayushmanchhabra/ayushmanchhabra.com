@@ -178,17 +178,6 @@ The bus driver rested his face on the steering wheel and looked at me.\\
 He probably didn’t want me dirtying the floor.\\
 He kept on staring. I realised he was dead.\\
 What a damn shame I thought.
-`,"./poetry/2017-08-12.md":`---
-title: KHWAAB
-author: Ayushman Chhabra
-date: 2017-08-12
-category: Poetry
----
-
-# KHWAAB
-
-अंिधयारा छा गया ओर जो हम िदन मेना कर पाए,\\
-वह हमनेखाबो मेखत कर िदया।
 `,"./poetry/2017-08-19.md":`---
 title: Hoping To Get By
 author: Ayushman Chhabra
@@ -532,10 +521,10 @@ category: Triveni
 
 # Khwaab
 
-jo din mei na kar paye\\
-vo humne sapno mei pura kar liya
+andhiyara cha gaya jo hum din mei na kar paye\\
+vo humne sapno mei khatm kar diya
 
-lekin subah sapne hi bhool hao toh khwaan pura hua?
+lekin subah sapne hi bhool jao toh khwaab pura hua?
 
 3/365
 `,"./tech/2024-12-28.md":`---

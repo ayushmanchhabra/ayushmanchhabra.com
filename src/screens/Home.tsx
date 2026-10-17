@@ -147,6 +147,20 @@ function Home() {
 
       <section className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-8 p-[40px]">
         <a
+          href="https://github.com/ayushmanchhabra/sanjay"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group h-48 flex flex-col items-start justify-center rounded-xl bg-gray-75 p-10 shadow-lg transition hover:shadow-xl hover:bg-gray-100 hover:scale-[1.02] cursor-pointer"
+        >
+          <h2 className="text-2xl font-semibold text-gray-800 mb-2 flex items-center gap-2">
+            sanjay
+            <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
+          </h2>
+          <p className="text-gray-700">
+            Sanjay watched the War of Kurukshetra and narrated it to the blind king, Dhritarashtra. Now he has the internet and your network is the battlefield.
+          </p>
+        </a>
+        <a
           href="https://github.com/ayushmanchhabra/hacking/tree/main/tools/killchain"
           target="_blank"
           rel="noopener noreferrer"
@@ -177,7 +191,7 @@ function Home() {
         </a>
 
         <a
-          href="https://github.com/ayushmanchhabra/autofrida"
+          href="https://github.com/ayushmanchhabra/CVE-2026-22226"
           target="_blank"
           rel="noopener noreferrer"
           className="group h-48 flex flex-col items-start justify-center rounded-xl bg-gray-75 p-10 shadow-lg transition hover:shadow-xl hover:bg-gray-100 hover:scale-[1.02] cursor-pointer"

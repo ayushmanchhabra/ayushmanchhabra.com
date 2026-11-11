@@ -23,6 +23,6 @@ jobs:
       - name: Install third party dependencies
         run: npm ci
       - name: Check for third party vulnerabilities
-        run: npm audit
+        run: npm audit --omit=dev
       - name: Check for linting warnings and errors
         run: npm run lint

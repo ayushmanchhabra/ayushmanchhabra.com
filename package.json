@@ -35,6 +35,18 @@
     "vite": "^8.3.6",
     "vite-plugin-markdown": "^2.2.0"
   },
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": "26.13.0",
+      "onFail": "warn"
+    },
+    "packageManager": {
+      "name": "npm",
+      "version": "12.2.2",
+      "onFail": "warn"
+    }
+  },
   "overrides": {
     "markdown-it": {
       "linkify-it": "^5.0.2"

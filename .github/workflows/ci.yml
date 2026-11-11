@@ -18,8 +18,18 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v7.0.1
+      - name: Read Node.js and npm versions from devEngines
+        id: devengines
+        shell: bash
+        run: |
+          echo "NODE_VERSION=$(jq -r '.devEngines.runtime.version' package.json)" >> "$GITHUB_ENV"
+          echo "NPM_VERSION=$(jq -r '.devEngines.packageManager.version' package.json)" >> "$GITHUB_ENV"
       - name: Setup Node.js
-        uses: volta-cli/action@v5.0.0
+        uses: actions/setup-node@v7.1.0
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+      - name: Update npm to the pinned version
+        run: npm install -g npm@${{ env.NPM_VERSION }}
       - name: Install third party dependencies
         run: npm ci
       - name: Check for third party vulnerabilities
